@@ -113,24 +113,27 @@ var increases = [];
 var decreases = [];
 
 
-for (var i = 0; i < finances.length; i++) {
+for (var i = 1; i < finances.length; i++) {
+    //variable to hold the each change
     var diff;
-    var j = i + 1;
+    // variable to hold previous month
+    var j = i - 1;
     console.log(j);
-    if (j == finances.length) break;
-
+    //break the loop when we have reach end of finances array
+    if (i == finances.length) break;
+    //calculate the change by subtracting previous month's value  from current month's value i.e. finances[i][1]
     diff = finances[i][1] - finances[j][1];
 
-    console.log(typeof (diff));
-    console.log("diff between " + finances[i] + " and " + finances[j] + " is " + diff);
+    console.log("diff between " + finances[j] + " and " + finances[i] + " is " + diff);
 
     //append the change to differences array
-    differences.push([diff, finances[j][0]]);
+    differences.push([diff, finances[i][0]]);
     // if prev month is greater than next month then append diff to decreases, else append to increases
-    if (finances[i][1] > finances[j][1]) {
-        decreases.push([diff, finances[j][0]])
-    } else if (finances[i][1] < finances[j][1]) {
-        increases.push([diff, finances[j][0]])
+    if (finances[j][1] > finances[i][1]) {
+
+        decreases.push([diff, finances[i][0]])
+    } else if (finances[j][1] < finances[i][1]) {
+        increases.push([diff, finances[i][0]])
     };
 };
 // gettinge the average of the changes.
@@ -147,7 +150,7 @@ var averageChanges = sum / differences.length;
 
 //sorting the increases and decreases array
 increases.sort(function (a, b) {
-    return a[0] - b[0];
+    return b[0] - a[0];
 });
 
 decreases.sort(function (a, b) {
@@ -166,5 +169,8 @@ console.log(greatestDecrease)
 
 console.log("Financial Analysis \n---------------------------\n"+
 "Total: $" + total + "\n" +
-"Average Change: $" + averageChanges + "\n" +
-"Greatest Increase in Profits: "+ increases[0][1]+ "($"+greatestIncrease+")")
+"Average Change: $" + averageChanges.toFixed(2) + "\n" +
+"Greatest Increase in Profits: "+ increases[0][1]+ "($"+greatestIncrease+")\n" +
+"Greatest Decrease in Profits: "+ decreases[0][1]+ "($"+greatestDecrease+")"
+
+)
