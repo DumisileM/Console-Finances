@@ -90,7 +90,6 @@ var finances = [
 // Total number of months in dataset
 //get length of array
 var totalNumMonths = finances.length;
-console.log(totalNumMonths);
 //The net total amount of Profit/Losses over the entire period.
 //loop through the array and sum the element at  second index for each array in the finances array and add it to total 
 var total = 0;
