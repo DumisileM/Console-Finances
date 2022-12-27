@@ -158,14 +158,12 @@ decreases.sort(function (a, b) {
 });
 //capturing the greatest increase and the first element within the first sub array
 var greatestIncrease = increases[0][0];
-console.log(greatestIncrease)
 
 //capturing the greatest decrease and the first element within the first sub array
 console.log(decreases)
 
 var greatestDecrease = decreases[0][0];
 // console.log(decreases)
-console.log(greatestDecrease)
 
 console.log("Financial Analysis \n---------------------------\n"+
 "Total: $" + total + "\n" +
@@ -173,4 +171,4 @@ console.log("Financial Analysis \n---------------------------\n"+
 "Greatest Increase in Profits: "+ increases[0][1]+ "($"+greatestIncrease+")\n" +
 "Greatest Decrease in Profits: "+ decreases[0][1]+ "($"+greatestDecrease+")"
 
-)
+);
