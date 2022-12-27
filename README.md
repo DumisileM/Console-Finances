@@ -11,7 +11,7 @@ The calculations ran return the following:
 
 
 ## Access and Usage
-The portfolio has been deployed on GitHub pages and can be accessed via this link:  
+The project has been deployed on GitHub pages and can be accessed via this link:  
 https://dumisilem.github.io/Console-Finances/
 
 To view the results of the calculations, ensure that you are using the Google Chrome browser and open the console. To do this right-click on the screen and select 'Inspect' then, click the 'Console' tab. You should see something like this in the console:  

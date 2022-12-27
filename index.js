@@ -124,8 +124,6 @@ for (var i = 1; i < finances.length; i++) {
     //calculate the change by subtracting previous month's value  from current month's value i.e. finances[i][1]
     diff = finances[i][1] - finances[j][1];
 
-    console.log("diff between " + finances[j] + " and " + finances[i] + " is " + diff);
-
     //append the change to differences array
     differences.push([diff, finances[i][0]]);
     // if prev month is greater than next month then append diff to decreases, else append to increases
@@ -160,10 +158,8 @@ decreases.sort(function (a, b) {
 var greatestIncrease = increases[0][0];
 
 //capturing the greatest decrease and the first element within the first sub array
-console.log(decreases)
 
 var greatestDecrease = decreases[0][0];
-// console.log(decreases)
 
 console.log("Financial Analysis \n---------------------------\n"+
 "Total: $" + total + "\n" +
