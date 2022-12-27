@@ -118,7 +118,6 @@ for (var i = 1; i < finances.length; i++) {
     var diff;
     // variable to hold previous month
     var j = i - 1;
-    console.log(j);
     //break the loop when we have reach end of finances array
     if (i == finances.length) break;
     //calculate the change by subtracting previous month's value  from current month's value i.e. finances[i][1]
