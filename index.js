@@ -160,6 +160,7 @@ var greatestIncrease = increases[0][0];
 var greatestDecrease = decreases[0][0];
 
 console.log("Financial Analysis \n---------------------------\n"+
+"Total Months: " + totalNumMonths + "\n" +
 "Total: $" + total + "\n" +
 "Average Change: $" + averageChanges.toFixed(2) + "\n" +
 "Greatest Increase in Profits: "+ increases[0][1]+ "($"+greatestIncrease+")\n" +
